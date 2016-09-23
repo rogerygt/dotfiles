@@ -33,11 +33,14 @@ alias sshlb1="sshlb1m -L19999:localhost:9999"
 alias sshlb2="sshlb2m -L29999:localhost:9999"
 alias bustlb1cache="sshlb1m sudo varnishadm ban.url ."
 alias bustlb2cache="sshlb2m sudo varnishadm ban.url ."
+alias bustallcaches="bustlb1cache; bustlb2cache; buststgcache"
 
 alias sshadmin="ssh www-data@ygt-admin02.corp.yourgolftravel.com"
 
 alias pfadmin="echo 'Port forwarding couchdb02 to 3000:4000'; ssh www-data@admin-actual.yourgolftravel.com -L4000:localhost:3000"
 alias pfcouch="echo 'Port forwarding couchdb02 to 5984:3999'; ssh www-data@admin-actual.yourgolftravel.com -L3999:couchdb02:5984"
+
+alias pushmanifest='git add manifest.json; git commit -m "update manifest"; git push'
 
 alias editbash="vim ~/.zshrc"
 
